@@ -134,7 +134,7 @@ function event(annc_tag, created_at, atype, actor_tag, re, atags, city_id, item_
 
   // add it to the list of all events
   EventDb.events.push(event);
-  if (atype == 'said') Chat.chats.push(event);
+  if (atype == 'said') Chat.push(event);
   if (atype == 'off') Agents.remove(item_tag);
 
   if (!EventDb.new_events_are_new) return event;
